@@ -17,4 +17,4 @@ To lint, use `yarn lint`.
 <hr>
 Yeah... This is both informal and a personal project.
 
-I enjoy precise and reliable documentation that screams "final product", but I also do this to blow off steam after a stressful week or when I'm bored. (I also like enjoy bad jokes)
+I enjoy precise and reliable documentation that screams "final product", but I also do this to blow off steam after a stressful week or when I'm bored. (I also enjoy bad jokes)
