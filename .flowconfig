@@ -1,0 +1,16 @@
+[ignore]
+node_modules/@rtsao/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
+
+[untyped]
+.*/node_modules/**/.*
+
