@@ -2,16 +2,30 @@
 import React from 'react';
 import {Route, Switch} from 'fusion-plugin-react-router';
 
-import Home from './pages/home.js';
-import PageNotFound from './pages/pageNotFound.js';
-import List from './pages/list';
+import Home from './home-page/home.js';
+import PageNotFound from './404-page/pageNotFound.js';
+import ItemListPage from './item-list/item-list-page';
+import SharedHeaderThing from './shared-header/shared-header-thing';
+// import SharedFooterThing from './shared-footer/shared-footer-thing';
+import {styled} from 'fusion-plugin-styletron-react';
+
+const PageContainer = styled('div', {
+  position: 'relative',
+  minHeight: '90vh',
+});
 
 const root = (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/list" component={List} />
-    <Route component={PageNotFound} />
-  </Switch>
+  <>
+    <SharedHeaderThing />
+    <PageContainer>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/list" component={ItemListPage} />
+        <Route component={PageNotFound} />
+      </Switch>
+    </PageContainer>
+    {/*<SharedFooterThing />*/}
+  </>
 );
 
 export default root;
