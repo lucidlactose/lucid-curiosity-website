@@ -1,7 +1,7 @@
 // @flow
-import type {ItemListType} from './types';
+import type {ItemListType} from '../styles';
 
-const ItemList: ItemListType = {
+const ItemListValues: ItemListType = {
   items: [
     {
       id: 1,
@@ -24,4 +24,4 @@ const ItemList: ItemListType = {
   ],
 };
 
-export default ItemList;
+export default ItemListValues;

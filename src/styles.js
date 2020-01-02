@@ -1,5 +1,6 @@
 // @flow
 
+// types
 export type ItemListType = {
   items: ItemType[],
 };
@@ -10,3 +11,6 @@ export type ItemType = {
   name: string,
   description: string,
 };
+
+// coloring
+export const HeaderBackgroundColor = '#66CCEE';
