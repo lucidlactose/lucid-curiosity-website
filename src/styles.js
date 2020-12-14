@@ -13,4 +13,4 @@ export type ItemType = {
 };
 
 // coloring
-export const HeaderBackgroundColor = '#66CCEE';
+export const HeaderBackgroundColor = '#AADDEE';

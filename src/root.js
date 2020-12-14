@@ -11,13 +11,15 @@ import {styled} from 'fusion-plugin-styletron-react';
 
 const PageContainer = styled('div', {
   position: 'relative',
-  minHeight: '90vh',
+  minHeight: '110vh',
+  maxWidth: '1420px',
+  margin: '0 auto',
 });
 
 const root = (
   <>
-    <SharedHeaderThing />
     <PageContainer>
+      <SharedHeaderThing />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/list" component={ItemListPage} />
