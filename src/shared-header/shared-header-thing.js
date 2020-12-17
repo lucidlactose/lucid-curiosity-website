@@ -22,14 +22,13 @@ const AlignmentWrapper = styled('div', {
   maxWidth: '1420px',
 });
 
-const NameWrapper = styled( 'div', {
+const NameWrapper = styled('div', {
   fontSize: '24px',
 });
 
-const ProfileWrapper = styled( 'div', {
+const ProfileWrapper = styled('div', {
   color: 'green',
 });
-
 
 const SharedHeaderThing = () => (
   <BackgroundWrapper>

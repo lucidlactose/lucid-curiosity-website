@@ -2,7 +2,7 @@
 import React from 'react';
 import {Route, Switch} from 'fusion-plugin-react-router';
 
-import Home from './home-page/home.js';
+import HomePage from './home-page/home-page.js';
 import PageNotFound from './404-page/pageNotFound.js';
 import ItemListPage from './item-list/item-list-page';
 import SharedHeaderThing from './shared-header/shared-header-thing';
@@ -21,7 +21,7 @@ const root = (
     <PageContainer>
       <SharedHeaderThing />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={HomePage} />
         <Route exact path="/list" component={ItemListPage} />
         <Route component={PageNotFound} />
       </Switch>
