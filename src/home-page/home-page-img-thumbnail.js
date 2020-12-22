@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import {styled} from 'styletron-react';
+import {DashedLineGrey} from '../styles';
 
 type PropsType = {
   name: string,
@@ -9,13 +10,13 @@ type PropsType = {
 
 const Thumb = styled('div', {
   display: 'inline-flex',
-  border: '1px solid #eaeaea',
+  border: `1px solid ${DashedLineGrey}`,
   borderRadius: '2',
-  margin: '0 8 8 0',
-  padding: '4',
   boxSizing: 'border-box',
   width: '100px',
   height: '100px',
+  margin: '0 8 8 0',
+  padding: '4px',
 });
 
 const ThumbInner = styled('div', {

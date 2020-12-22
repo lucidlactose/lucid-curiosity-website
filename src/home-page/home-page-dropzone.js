@@ -2,21 +2,22 @@
 import React, {useEffect, useState} from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
 import {useDropzone} from 'react-dropzone';
+import {BackgroundGrey} from '../styles';
 import HomePageImgThumbnail from './home-page-img-thumbnail';
 
 const Dropzone = styled('div', {
-  maxWidth: '1024px',
-  minWidth: '128px',
-  maxHeight: '512px',
-  minHeight: '64px',
   borderStyle: 'dashed',
-  borderColor: '#AAAAAA',
+  borderColor: BackgroundGrey,
   borderRadius: '1',
+  minWidth: '128px',
+  minHeight: '64px',
+  maxWidth: '1024px',
+  maxHeight: '512px',
 });
 
 const InsideBox = styled('div', {
+  color: BackgroundGrey,
   margin: '64px 128px',
-  color: '#AAAAAA',
 });
 
 const HomePageDropzone = () => {
