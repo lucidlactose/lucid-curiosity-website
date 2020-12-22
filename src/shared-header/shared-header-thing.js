@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
-import {HeaderBackgroundColor} from '../styles';
+import {BackgroundSkyBlue} from '../styles';
 
 const BackgroundWrapper = styled('div', {
-  background: HeaderBackgroundColor,
-  position: 'fixed',
+  background: BackgroundSkyBlue,
   height: '50px',
+  position: 'fixed',
   top: '0',
   left: '0',
   right: '0',
@@ -18,8 +18,8 @@ const AlignmentWrapper = styled('div', {
   justifyContent: 'space-between',
   alignItems: 'center',
   lineHeight: '2',
-  margin: '0 auto',
   maxWidth: '1420px',
+  margin: '0 auto',
 });
 
 const NameWrapper = styled('div', {
