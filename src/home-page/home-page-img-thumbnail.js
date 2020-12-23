@@ -8,13 +8,17 @@ type PropsType = {
   preview: string,
 };
 
+const ThumbnailWrapper = styled('div', {
+  display: 'block',
+});
+
 const Thumb = styled('div', {
   display: 'inline-flex',
   border: `1px solid ${DashedLineGrey}`,
   borderRadius: '2',
   boxSizing: 'border-box',
-  width: '100px',
-  height: '100px',
+  width: '200px',
+  height: '200px',
   margin: '0 8 8 0',
   padding: '4px',
 });
@@ -31,14 +35,14 @@ const Img = styled('img', {
   height: '100%',
 });
 
-const HomePageImgThumbnail = (props: PropsType) => {
-  return (
+const HomePageImgThumbnail = (props: PropsType) => (
+  <ThumbnailWrapper>
     <Thumb key={props.name}>
       <ThumbInner>
         <Img src={props.preview} />
       </ThumbInner>
     </Thumb>
-  );
-};
+  </ThumbnailWrapper>
+);
 
 export default HomePageImgThumbnail;

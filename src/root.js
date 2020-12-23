@@ -9,21 +9,21 @@ import PageNotFound from './404-page/pageNotFound.js';
 import SharedHeaderThing from './shared-header/shared-header-thing';
 import SharedFooterThing from './shared-footer/shared-footer-thing';
 
-const PageContents = styled('div', {
+const PageContainer = styled('div', {
   marginTop: '64px 0',
-  padding: '64px',
+  padding: '64px 64px 32px',
 });
 
 const root = (
   <>
     <SharedHeaderThing />
-    <PageContents>
+    <PageContainer>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/list" component={ItemListPage} />
         <Route component={PageNotFound} />
       </Switch>
-    </PageContents>
+    </PageContainer>
     <SharedFooterThing />
   </>
 );
