@@ -12,6 +12,14 @@ const FullHeightDiv = styled('div', {
   margin: '0 auto',
 });
 
+const Center = styled('div', {
+  fontFamily: 'HelveticaNeue-Light, Arial',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100%',
+  padding: '32px',
+});
+
 const Parent = styled('div', {
   display: 'block',
   marginRight: '16px',
@@ -24,14 +32,6 @@ const Title = styled('h2', {
 const Text = styled('section', {
   display: 'block',
   fontSize: '16px',
-});
-
-const Center = styled('div', {
-  fontFamily: 'HelveticaNeue-Light, Arial',
-  display: 'flex',
-  justifyContent: 'center',
-  height: '100%',
-  padding: '32px',
 });
 
 const HomePage = () => (
