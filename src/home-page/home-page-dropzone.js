@@ -4,11 +4,15 @@ import {styled} from 'fusion-plugin-styletron-react';
 import {useDropzone} from 'react-dropzone';
 import {BackgroundGrey} from '../styles';
 import HomePageImgThumbnail from './home-page-img-thumbnail';
+import {DropboxText} from '../values';
+
+const DropzoneContainer = styled('section', {
+  width: '1024px',
+  padding: '32px',
+});
 
 const Dropzone = styled('div', {
-  borderStyle: 'dashed',
-  borderColor: BackgroundGrey,
-  borderRadius: '1',
+  border: `3px dashed ${BackgroundGrey}`,
   minWidth: '128px',
   minHeight: '64px',
   maxWidth: '1024px',
@@ -17,6 +21,7 @@ const Dropzone = styled('div', {
 
 const InsideBox = styled('div', {
   color: BackgroundGrey,
+  width: '256px',
   margin: '64px 128px',
 });
 
@@ -37,7 +42,7 @@ const HomePageDropzone = () => {
 
   const fileStuff = acceptedFiles.map(file => (
     <li key={file.path}>
-      {file.path} - {file.size} bytes
+      {file.path} : files {file.size} bytes
       <HomePageImgThumbnail {...file} />
     </li>
   ));
@@ -50,17 +55,17 @@ const HomePageDropzone = () => {
   );
 
   return (
-    <section>
+    <DropzoneContainer>
       <Dropzone {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
-        <InsideBox>Click here or drag-drop files here</InsideBox>
+        <InsideBox> {DropboxText} </InsideBox>
       </Dropzone>
 
       <aside>
         {files.length ? <h4> Files </h4> : null}
         <ul>{fileStuff}</ul>
       </aside>
-    </section>
+    </DropzoneContainer>
   );
 };
 
