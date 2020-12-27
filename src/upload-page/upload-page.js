@@ -1,19 +1,20 @@
 // @flow
 import React from 'react';
-import HomeDropzone from './home-page-dropzone';
 import {styled} from 'fusion-plugin-styletron-react';
 import {BackgroundDarkWhite} from '../styles';
-import {TitleText, TemporaryText} from '../values';
+import {TemporaryUploadPageValues as values} from '../values';
+import UploadPageDropzone from './upload-page-dropzone';
 
 const FullHeightDiv = styled('div', {
   backgroundColor: BackgroundDarkWhite,
+  fontFamily: 'HelveticaNeue-Light, Arial',
+  display: 'flex',
   maxWidth: '1420px',
   height: '100%',
   margin: '0 auto',
 });
 
 const Center = styled('div', {
-  fontFamily: 'HelveticaNeue-Light, Arial',
   display: 'flex',
   justifyContent: 'center',
   height: '100%',
@@ -21,29 +22,24 @@ const Center = styled('div', {
 });
 
 const Parent = styled('div', {
-  display: 'block',
+  maxWidth: '710px',
   marginRight: '16px',
 });
 
-const Title = styled('h2', {
-  display: 'block',
-});
-
-const Text = styled('section', {
-  display: 'block',
+const Text = styled('div', {
   fontSize: '16px',
 });
 
-const HomePage = () => (
+const UploadPage = () => (
   <FullHeightDiv>
+    <UploadPageDropzone />
     <Center>
       <Parent>
-        <Title> {TitleText} </Title>
-        <Text> {TemporaryText} </Text>
+        <h2> {values.TitleText} </h2>
+        <Text> {values.TemporaryText} </Text>
       </Parent>
-      <HomeDropzone />
     </Center>
   </FullHeightDiv>
 );
 
-export default HomePage;
+export default UploadPage;
