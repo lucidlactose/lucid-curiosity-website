@@ -6,12 +6,7 @@ import {TemporaryUploadPageValues as values} from '../values';
 import UploadPageDropzone from './upload-page-dropzone';
 
 const FullHeightDiv = styled('div', {
-  backgroundColor: BackgroundDarkWhite,
-  fontFamily: 'HelveticaNeue-Light, Arial',
   display: 'flex',
-  maxWidth: '1420px',
-  height: '100%',
-  margin: '0 auto',
 });
 
 const Center = styled('div', {

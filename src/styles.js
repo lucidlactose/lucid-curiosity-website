@@ -17,7 +17,7 @@ export const DashedLineGrey = '#AAA';
 export const BackgroundSkyBlue = '#5A8CA0';
 export const BackgroundGrey = '#808080';
 export const TextGrey = '#AAA';
-export const SomethingBlue = "#AFD7FF";
+export const SomethingBlue = '#AFD7FF';
 export const BackgroundDarkWhite = '#EEE';
 
 /*

@@ -7,7 +7,7 @@ import {TemporaryFooterValues as values} from '../values';
 
 const Wrapper = styled('div', {
   backgroundColor: BackgroundSkyBlue,
-  margin: '-8px',
+  margin: '0 -8px',
 });
 
 const AlignmentWrapper = styled('div', {
@@ -25,8 +25,7 @@ const ImageWrapper = styled('img', {
   height: 'auto',
 });
 
-const FlexChildWrapper = styled('div', {
-});
+const FlexChildWrapper = styled('div', {});
 
 const TextWrapper = styled('div', {
   color: 'black',
@@ -39,9 +38,9 @@ const SharedFooterThing = () => (
         <ImageWrapper src={assetUrl('../assets/jolly_roger.png')} />
       </FlexChildWrapper>
       <FlexChildWrapper>
-        { values.MiddleBox.map((val, key) => (
-            <TextWrapper key={key}> {val} </TextWrapper>
-          ))}
+        {values.MiddleBox.map((val, key) => (
+          <TextWrapper key={key}> {val} </TextWrapper>
+        ))}
       </FlexChildWrapper>
       <FlexChildWrapper>
         <TextWrapper> {values.RightBox} </TextWrapper>

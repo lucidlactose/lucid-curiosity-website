@@ -64,24 +64,24 @@ const UploadPageDropzone = () => {
 
   return (
     <LeftHandWrapper>
-        <DropzoneContainer>
-          <Dropzone {...getRootProps({className: 'dropzone'})}>
-            <input {...getInputProps()} />
-            <InsideBox> {values.DropboxText} </InsideBox>
-          </Dropzone>
+      <DropzoneContainer>
+        <Dropzone {...getRootProps({className: 'dropzone'})}>
+          <input {...getInputProps()} />
+          <InsideBox> {values.DropboxText} </InsideBox>
+        </Dropzone>
 
-          <aside>
-            {files.length ? <h4> {values.FilesTitleText} </h4> : null}
-            <ul>
+        <aside>
+          {files.length ? <h4> {values.FilesTitleText} </h4> : null}
+          <ul>
             {acceptedFiles.map(file => (
               <li key={file.path}>
                 {file.path} : files {file.size} bytes
                 <UploadPageImgThumbnail {...file} />
               </li>
             ))}
-            </ul>
-          </aside>
-        </DropzoneContainer>
+          </ul>
+        </aside>
+      </DropzoneContainer>
     </LeftHandWrapper>
   );
 };
