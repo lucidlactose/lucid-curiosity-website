@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
+import { TemporaryHomePageValues as values } from '../values';
 
 /*
 Personally, I want to stylistically display this in  an artistic way.
@@ -17,10 +18,6 @@ const Wrapper = styled('div', {
     padding: '32px 0',
 });
 
-const TableWrapper = styled('table', {
-    margin: '0 auto',
-});
-
 const TitleWrapper = styled('th', {
     fontSize: '32px',
     display: 'flex',
@@ -28,28 +25,28 @@ const TitleWrapper = styled('th', {
     margin: '0 auto',
 });
 
-const RowWrapper = styled('tr', {
+const FlexWrapper = styled('div', {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    width: '365px',
+    margin: '0 auto',
 });
 
 const BoxWrapper = styled('td', {
+    flex: '1 1 44%',
     border: '1px black solid',
-    width: '150px',
+    boxSizing: 'border-box',
     height: '150px',
+    margin: '3%',
 });
 
 const HomePage = () => (
     <Wrapper>
-        <TitleWrapper> AHHHHHHH </TitleWrapper>
-        <TableWrapper>
-            <RowWrapper>
-                <BoxWrapper>Something else</BoxWrapper>
-                <BoxWrapper>Something else</BoxWrapper>
-            </RowWrapper>
-            <RowWrapper>
-                <BoxWrapper>Something else</BoxWrapper>
-                <BoxWrapper>Something else</BoxWrapper>
-            </RowWrapper>
-        </TableWrapper>
+        <TitleWrapper> {values.TitleText} </TitleWrapper>
+        <FlexWrapper>
+            {values.BoxText.map(text => <BoxWrapper> {text} </BoxWrapper>)}
+        </FlexWrapper>
     </Wrapper>
 );
 
