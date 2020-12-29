@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
-import {BackgroundDarkWhite} from '../styles';
 import {TemporaryUploadPageValues as values} from '../values';
 import UploadPageDropzone from './upload-page-dropzone';
 
