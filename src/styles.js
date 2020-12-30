@@ -14,8 +14,10 @@ export type ItemType = {
 
 // coloring
 export const DashedLineGrey = '#AAA';
-export const BackgroundSkyBlue = '#ADE';
-export const BackgroundGrey = '#AAA';
+export const BackgroundSkyBlue = '#5A8CA0';
+export const BackgroundGrey = '#808080';
+export const TextGrey = '#AAA';
+export const SomethingBlue = '#AFD7FF';
 export const BackgroundDarkWhite = '#EEE';
 
 /*
@@ -49,6 +51,7 @@ export const BackgroundDarkWhite = '#EEE';
         fontSize
         fontFamily
         display
+        flex
         justifyContent
         alignItems
         lineHeight
@@ -65,6 +68,8 @@ export const BackgroundDarkWhite = '#EEE';
         maxHeight
         maxWidth
         overflow
+        overflowX
+        overflowY
         margin
         marginTop
         marginRight

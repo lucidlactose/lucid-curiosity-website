@@ -17,9 +17,9 @@ const Thumb = styled('div', {
   border: `1px solid ${DashedLineGrey}`,
   borderRadius: '2',
   boxSizing: 'border-box',
-  width: '200px',
+  width: '400px',
   height: '200px',
-  margin: '0 8 8 0',
+  margin: '0 auto 8 0',
   padding: '4px',
 });
 
@@ -35,7 +35,7 @@ const Img = styled('img', {
   height: '100%',
 });
 
-const HomePageImgThumbnail = (props: PropsType) => (
+const UploadPageImgThumbnail = (props: PropsType) => (
   <ThumbnailWrapper>
     <Thumb key={props.name}>
       <ThumbInner>
@@ -45,4 +45,4 @@ const HomePageImgThumbnail = (props: PropsType) => (
   </ThumbnailWrapper>
 );
 
-export default HomePageImgThumbnail;
+export default UploadPageImgThumbnail;

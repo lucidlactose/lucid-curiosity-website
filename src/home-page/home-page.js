@@ -1,49 +1,55 @@
 // @flow
 import React from 'react';
-import HomeDropzone from './home-page-dropzone';
 import {styled} from 'fusion-plugin-styletron-react';
-import {BackgroundDarkWhite} from '../styles';
-import {TitleText, TemporaryText} from '../values';
+import {TemporaryHomePageValues as values} from '../values';
 
-const FullHeightDiv = styled('div', {
-  backgroundColor: BackgroundDarkWhite,
-  maxWidth: '1420px',
-  height: '100%',
+/*
+Personally, I want to stylistically display this in  an artistic way.
+Maybe the boxes, instead of a table, will be around in a circle.
+
+There could be a little icon in the middle that says "yo", then when you
+click the little icon moving spinning clockwise and counter clockwise by 12
+degrees at slow intervals. The icon flips over and exposes the website
+options that are all organized in circles.
+*/
+
+const Wrapper = styled('div', {
+  margin: '0 auto',
+  padding: '32px 0',
+});
+
+const TitleWrapper = styled('th', {
+  fontSize: '32px',
+  display: 'flex',
+  justifyContent: 'center',
   margin: '0 auto',
 });
 
-const Center = styled('div', {
-  fontFamily: 'HelveticaNeue-Light, Arial',
+const FlexWrapper = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  height: '100%',
-  padding: '32px',
+  flexWrap: 'wrap',
+  width: '365px',
+  margin: '0 auto',
 });
 
-const Parent = styled('div', {
-  display: 'block',
-  marginRight: '16px',
-});
-
-const Title = styled('h2', {
-  display: 'block',
-});
-
-const Text = styled('section', {
-  display: 'block',
-  fontSize: '16px',
+const BoxWrapper = styled('td', {
+  flex: '1 1 44%',
+  border: '1px black solid',
+  boxSizing: 'border-box',
+  height: '150px',
+  margin: '3%',
 });
 
 const HomePage = () => (
-  <FullHeightDiv>
-    <Center>
-      <Parent>
-        <Title> {TitleText} </Title>
-        <Text> {TemporaryText} </Text>
-      </Parent>
-      <HomeDropzone />
-    </Center>
-  </FullHeightDiv>
+  <Wrapper>
+    <TitleWrapper> {values.TitleText} </TitleWrapper>
+    <FlexWrapper>
+      {values.BoxText.map((text, key) => (
+        <BoxWrapper key={key}> {text} </BoxWrapper>
+      ))}
+    </FlexWrapper>
+  </Wrapper>
 );
 
 export default HomePage;
