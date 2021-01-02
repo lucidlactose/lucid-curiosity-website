@@ -41,12 +41,16 @@ const BoxWrapper = styled('td', {
   margin: '3%',
 });
 
+const LinkedWrapper = styled('a', {
+  textDecoration: 'none',
+});
+
 const HomePage = () => (
   <Wrapper>
     <TitleWrapper> {values.TitleText} </TitleWrapper>
     <FlexWrapper>
-      {values.BoxText.map((text, key) => (
-        <BoxWrapper key={key}> {text} </BoxWrapper>
+      {values.BoxText.map((val, key) => (
+        <BoxWrapper key={key}> <LinkedWrapper href={val.link} > {val.text} </LinkedWrapper> </BoxWrapper>
       ))}
     </FlexWrapper>
   </Wrapper>

@@ -3,10 +3,13 @@
 export const TemporaryHomePageValues = {
   TitleText: 'Welcommen',
   BoxText: [
-    'Something else',
-    'Something else',
-    'Something else',
-    'Something else',
+    {
+      text: 'Upload',
+      link: './upload',
+    },
+    {text: 'Something else'},
+    {text: 'Something else'},
+    {text: 'Something else'},
   ],
 };
 
