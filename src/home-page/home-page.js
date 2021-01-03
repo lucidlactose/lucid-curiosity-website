@@ -33,12 +33,17 @@ const FlexWrapper = styled('div', {
   margin: '0 auto',
 });
 
+// 150 box height/width
+// 16 font size
+// (150 -16)/2 = 67px
 const BoxWrapper = styled('td', {
+  fontSize: '16px',
   flex: '1 1 44%',
   border: '1px black solid',
   boxSizing: 'border-box',
   height: '150px',
   margin: '3%',
+  padding: '67px',
 });
 
 const LinkedWrapper = styled('a', {
