@@ -14,6 +14,7 @@ import SharedFooterThing from './shared-footer/shared-footer-thing';
 const PageContainer = styled('div', {
   backgroundColor: BackgroundDarkWhite,
   fontFamily: 'HelveticaNeue-Light, Arial',
+  minHeight: 'calc(100vh - 370px)',
   maxWidth: '1420px',
   margin: '64px auto 14px',
 });
