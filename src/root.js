@@ -11,10 +11,12 @@ import PageNotFound from './404-page/pageNotFound.js';
 import SharedHeaderThing from './shared-header/shared-header-thing';
 import SharedFooterThing from './shared-footer/shared-footer-thing';
 
+// Header height: 50px
+// Footer height: 260px
 const PageContainer = styled('div', {
   backgroundColor: BackgroundDarkWhite,
   fontFamily: 'HelveticaNeue-Light, Arial',
-  minHeight: 'calc(100vh - 370px)',
+  minHeight: 'calc(100vh - 50px - 260px)',
   maxWidth: '1420px',
   margin: '64px auto 14px',
 });
