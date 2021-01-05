@@ -3,10 +3,13 @@
 export const TemporaryHomePageValues = {
   TitleText: 'Welcommen',
   BoxText: [
-    'Something else',
-    'Something else',
-    'Something else',
-    'Something else',
+    {
+      text: 'Upload',
+      link: './upload',
+    },
+    {text: 'Something else'},
+    {text: 'Something else'},
+    {text: 'Something else'},
   ],
 };
 
@@ -22,8 +25,6 @@ export const TemporaryUploadPageValues = {
 export const TemporaryFooterValues = {
   MiddleBox: [
     'How does this look in this box right here',
-    'One two three one two three',
-    'Another one',
     "Knee's weak mom's spaghetti, there's spaghetti",
     'Okay, final one final one',
   ],

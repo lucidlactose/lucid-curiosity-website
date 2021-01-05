@@ -7,14 +7,14 @@ import {TemporaryFooterValues as values} from '../values';
 
 const Wrapper = styled('div', {
   backgroundColor: BackgroundSkyBlue,
-  margin: '0 -8px',
+  height: '260px',
+  margin: '0 -8px -8px',
 });
 
 const AlignmentWrapper = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   lineHeight: '2',
-  minHeight: '256px',
   maxWidth: '1420px',
   margin: '0 auto',
   paddingTop: '64px',

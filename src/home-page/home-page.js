@@ -33,20 +33,31 @@ const FlexWrapper = styled('div', {
   margin: '0 auto',
 });
 
+// 150 box height/width
+// 16 font size
+// (150 -16)/2 = 67px
 const BoxWrapper = styled('td', {
+  fontSize: '16px',
+  display: 'flex',
+  justifyContent: 'center',
   flex: '1 1 44%',
   border: '1px black solid',
   boxSizing: 'border-box',
   height: '150px',
   margin: '3%',
+  padding: '67px 0',
+});
+
+const LinkedWrapper = styled('a', {
+  textDecoration: 'none',
 });
 
 const HomePage = () => (
   <Wrapper>
     <TitleWrapper> {values.TitleText} </TitleWrapper>
     <FlexWrapper>
-      {values.BoxText.map((text, key) => (
-        <BoxWrapper key={key}> {text} </BoxWrapper>
+      {values.BoxText.map((val, key) => (
+        <BoxWrapper key={key}> <LinkedWrapper href={val.link} > {val.text} </LinkedWrapper> </BoxWrapper>
       ))}
     </FlexWrapper>
   </Wrapper>
