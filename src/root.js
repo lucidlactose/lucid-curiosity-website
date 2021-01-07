@@ -10,6 +10,7 @@ import ItemListPage from './item-list/item-list-page';
 import PageNotFound from './404-page/pageNotFound.js';
 import SharedHeaderThing from './shared-header/shared-header-thing';
 import SharedFooterThing from './shared-footer/shared-footer-thing';
+import ConlangPage from './conlang-page/conlang-page';
 
 // Header height: 50px
 // Footer height: 260px
@@ -27,8 +28,9 @@ const root = (
     <PageContainer>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/upload" component={UploadPage} />
+        <Route exact name="upload" path="/upload" component={UploadPage} />
         <Route exact path="/list" component={ItemListPage} />
+        <Route exact name="conlang" path="/conlang" component={ConlangPage} />
         <Route component={PageNotFound} />
       </Switch>
     </PageContainer>

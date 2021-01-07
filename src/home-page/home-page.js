@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import Link from 'fusion-plugin-react-router';
 import {styled} from 'fusion-plugin-styletron-react';
 import {TemporaryHomePageValues as values} from '../values';
 
@@ -12,6 +13,11 @@ click the little icon moving spinning clockwise and counter clockwise by 12
 degrees at slow intervals. The icon flips over and exposes the website
 options that are all organized in circles.
 */
+
+type ValuesType = {
+  text: string,
+  link?: string,
+};
 
 const Wrapper = styled('div', {
   margin: '0 auto',
@@ -48,7 +54,7 @@ const BoxWrapper = styled('td', {
   padding: '67px 0',
 });
 
-const LinkedWrapper = styled('a', {
+const LinkedWrapper = styled('div', {
   textDecoration: 'none',
 });
 
@@ -56,8 +62,10 @@ const HomePage = () => (
   <Wrapper>
     <TitleWrapper> {values.TitleText} </TitleWrapper>
     <FlexWrapper>
-      {values.BoxText.map((val, key) => (
-        <BoxWrapper key={key}> <LinkedWrapper href={val.link} > {val.text} </LinkedWrapper> </BoxWrapper>
+      {values.BoxText.map((val: ValuesType, key) => (
+        <BoxWrapper key={key}>
+          <LinkedWrapper href={val.link}> {val.text} </LinkedWrapper>
+        </BoxWrapper>
       ))}
     </FlexWrapper>
   </Wrapper>

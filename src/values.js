@@ -5,9 +5,12 @@ export const TemporaryHomePageValues = {
   BoxText: [
     {
       text: 'Upload',
-      link: './upload',
+      link: 'upload',
     },
-    {text: 'Something else'},
+    {
+      text: 'Conlang',
+      link: 'conlang',
+    },
     {text: 'Something else'},
     {text: 'Something else'},
   ],
