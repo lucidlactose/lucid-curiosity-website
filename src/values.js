@@ -11,8 +11,6 @@ export const TemporaryHomePageValues = {
       text: 'Conlang',
       link: 'conlang',
     },
-    {text: 'Something else'},
-    {text: 'Something else'},
   ],
 };
 

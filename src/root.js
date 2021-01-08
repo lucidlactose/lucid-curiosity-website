@@ -29,8 +29,8 @@ const root = (
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact name="upload" path="/upload" component={UploadPage} />
-        <Route exact path="/list" component={ItemListPage} />
         <Route exact name="conlang" path="/conlang" component={ConlangPage} />
+        <Route exact path="/list" component={ItemListPage} />
         <Route component={PageNotFound} />
       </Switch>
     </PageContainer>
