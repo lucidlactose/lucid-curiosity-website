@@ -23,6 +23,7 @@
     "handlebars": "^4.3.0",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-dropzone": "^11.2.4",
