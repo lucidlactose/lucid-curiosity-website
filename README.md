@@ -2,13 +2,11 @@
 
 <h2> What is this? </h2>
 
-This project focuses on a sort of Photo Organizer. This was inspired by the nightmare that is Google Photos and especially Apple Photos. Personally I like using both albums and tags to find photos and most alternatives are just as horrid.
+This project focuses doesn't really focus on anything. It's a (hopefully) organized website full of React and CSS experiments.
 
-I personally use DigiKam, and while it's everything I ever wanted, I like making browser interfaces, so I'm making one inspired off DigiKam, image forums, and artsy-websites. I know what I want, I know what looks good, and I know how to do it. Use DigiKam, not this.
+The original goal was to make some sort of photo organizer. This was inspired by the nightmare that is Google Photos and especially Apple Photos. Personally I like using both albums and tags to find photos and most alternatives are just as horrid. I personally use DigiKam, and inspired by recreating a spirtual successor on a browser. Don't view this as a subsitute or alternative... yet.
 
-
-This is me having fun with web junk, primarily React and CSS (alot of CSS), to stay sharp. I don't recommend using any of this in any shape or form.
-
+Now there's a few more goals. Check branches for incomplete work/ spilt can's of gobbledygook and whachamacallits.
 <hr>
 
 <h2> Installation </h2>
@@ -25,7 +23,6 @@ To lint, use `yarn lint`.
 
 
 <hr>
-Yeah... This is both an informal personal project.
+Yeah... This is an informal personal project.
 
-I enjoy precise and reliable documentation that screams "final product", so there's many revisions and commits that'll just be formatting/ design decisions.
-I do this to blow off steam after a stressful week or when I'm bored. (I also like enjoy bad jokes)
+I try to keep my skills from dulling (especially my CSS). I enjoy precise and reliable documentation that screams "final product", so there can be a few hundred commits but very little actual progress. I do this to blow off steam after a stressful week or when I'm bored. (I also like enjoy bad jokes)
