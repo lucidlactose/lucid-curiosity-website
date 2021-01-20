@@ -7,32 +7,37 @@ import {
   Slide,
   Slider,
   DotGroup,
-  //   ImageWithZoom,
+  Image,
   ButtonFirst,
   ButtonLast,
   ButtonBack,
   ButtonNext,
+  ImageWithZoom,
 } from 'pure-react-carousel';
 
 const MySlider = styled(Slider, {
-  position: 'relative',
   overflow: 'hidden',
-  maxWidth: '800px',
+  maxWidth: '1200px',
 });
 
 const MySlide = styled(Slide, {
   float: 'left',
-  position: 'relative',
   display: 'block',
   boxSizing: 'border-box',
-  height: '0',
+  height: '500px',
   margin: '0',
   listStyleType: 'none',
 });
 
-const Img = styled('img', {
+const Img = styled(Image, {
   height: '300px',
 });
+
+/*
+    In terms of the example poems, I want to make something like a sonnet.
+    And then I want 2-3 examples of the Shi Shi Shi poems or the 子子子子 poem or the had had had had/ buffalo buffalo buffal o poems
+*/
+
 
 // for whatever reason, ImgWithZoom doesn't work atm
 const ConlangPagePoemCarousel = () => (
@@ -52,22 +57,36 @@ const ConlangPagePoemCarousel = () => (
     </p>
     <MySlider>
       <MySlide index={0}>
-        <Img src={assetUrl('../assets/jolly_roger.png')} />
+        <p>From fairest creatures we desire increase,</p>
+        <p>That thereby beauty’s rose might never die,</p>
+        <p>But as the riper should by time decrease,</p>
+        <p>His tender heir mught bear his memeory:</p>
+        <p>But thou, contracted to thine own bright eyes,</p>
+        <p>Feed’st thy light’st flame with self-substantial fuel,</p>
+        <p>Making a famine where abundance lies,</p>
+        <p>Thyself thy foe, to thy sweet self too cruel.</p>
+        <p>Thou that art now the world’s fresh ornament</p>
+        <p>And only herald to the gaudy spring,</p>
+        <p>Within thine own bud buriest thy content</p>
+        <p>And, tender churl, makest waste in niggarding.</p>
+        <p>Pity the world, or else this glutton be,</p>
+        <p>To eat the world’s due, by the grave and thee.</p>
       </MySlide>
       <MySlide index={1}>
-        <Img src={assetUrl('../assets/img02.jpg')} />
-      </MySlide>
-      <MySlide index={2}>
-        <Img src={assetUrl('../assets/img03.jpg')} />
-      </MySlide>
-      <MySlide index={3}>
-        <Img src={assetUrl('../assets/img04.jpg')} />
-      </MySlide>
-      <MySlide index={4}>
-        <Img src={assetUrl('../assets/img05.jpg')} />
-      </MySlide>
-      <MySlide index={5}>
-        <Img src={assetUrl('../assets/img06.jpg')} />
+        <p>From fairest creatures we desire increase,</p>
+        <p>That thereby beauty’s rose might never die,</p>
+        <p>But as the riper should by time decrease,</p>
+        <p>His tender heir mught bear his memeory:</p>
+        <p>But thou, contracted to thine own bright eyes,</p>
+        <p>Feed’st thy light’st flame with self-substantial fuel,</p>
+        <p>Making a famine where abundance lies,</p>
+        <p>Thyself thy foe, to thy sweet self too cruel.</p>
+        <p>Thou that art now the world’s fresh ornament</p>
+        <p>And only herald to the gaudy spring,</p>
+        <p>Within thine own bud buriest thy content</p>
+        <p>And, tender churl, makest waste in niggarding.</p>
+        <p>Pity the world, or else this glutton be,</p>
+        <p>To eat the world’s due, by the grave and thee.</p>
       </MySlide>
     </MySlider>
     <ButtonFirst>First</ButtonFirst>

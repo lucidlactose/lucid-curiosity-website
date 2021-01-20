@@ -15,16 +15,20 @@ const TitleWrapper = styled('h1', {
   margin: '0 auto',
 });
 
+const CarouselWrapper = styled('div', {
+  position: 'relative',
+  left: '30px',
+})
+
 // this page makes a second footer appear for some reason
 // I have confirmed that it comes drom the ConlangPagePoemCarousel
 const ConlangPage = () => (
   <Wrapper>
-    <TitleWrapper>
-      {' '}
-      Welcome to my Conalng Documentation. Keep your hands and feet within the
-      vehicle.{' '}
-    </TitleWrapper>
+    <TitleWrapper>Welcome to my Conlang Documentation.</TitleWrapper>
+    <CarouselWrapper>
+
     <ConlangPagePoemCarousel />
+    </CarouselWrapper>
   </Wrapper>
 );
 
