@@ -14,17 +14,16 @@ import {
 import {TemporaryConlangPagePoemCarouselValues as values} from '../values';
 
 const MySlider = styled(Slider, {
-  overflow: 'hidden',
   maxWidth: '1200px',
+  overflow: 'hidden',
 });
 
 const MySlide = styled(Slide, {
-  float: 'left',
   display: 'block',
+  float: 'left',
   boxSizing: 'border-box',
   height: '700px',
   margin: '0',
-  listStyleType: 'none',
 });
 
 const ArabicSlide = withStyle(MySlide, {
@@ -35,8 +34,6 @@ const ArabicSlide = withStyle(MySlide, {
     In terms of the example poems, I want to make something like a sonnet.
     And then I want 2-3 examples of the Shi Shi Shi poems or the 子子子子 poem or the had had had had/ buffalo buffalo buffal o poems
 */
-
-// for whatever reason, ImgWithZoom doesn't work atm
 const ConlangPagePoemCarousel = () => (
   <CarouselProvider
     visibleSlides={3}

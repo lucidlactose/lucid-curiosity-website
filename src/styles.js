@@ -51,6 +51,7 @@ export const BackgroundDarkWhite = '#EEE';
         fontSize
         fontFamily
         display
+        float
         flex
         justifyContent
         alignItems

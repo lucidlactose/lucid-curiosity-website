@@ -16,8 +16,7 @@ const TitleWrapper = styled('h1', {
 });
 
 const CarouselWrapper = styled('div', {
-  position: 'relative',
-  left: '30px',
+  marginLeft: '30px',
 });
 
 const ConlangPage = () => (
