@@ -1,17 +1,15 @@
 // @flow
 import React from 'react';
-import {styled} from 'fusion-plugin-styletron-react';
+import {styled, withStyle} from 'fusion-plugin-styletron-react';
 import {
   CarouselProvider,
   Slide,
   Slider,
   DotGroup,
-  Image,
   ButtonFirst,
   ButtonLast,
   ButtonBack,
   ButtonNext,
-  ImageWithZoom,
 } from 'pure-react-carousel';
 import {TemporaryConlangPagePoemCarouselValues as values} from '../values';
 
@@ -24,13 +22,13 @@ const MySlide = styled(Slide, {
   float: 'left',
   display: 'block',
   boxSizing: 'border-box',
-  height: '500px',
+  height: '700px',
   margin: '0',
   listStyleType: 'none',
 });
 
-const Img = styled(Image, {
-  height: '300px',
+const ArabicSlide = withStyle(MySlide, {
+  textAlign: 'right',
 });
 
 /*
@@ -48,23 +46,27 @@ const ConlangPagePoemCarousel = () => (
     naturalSlideHeight={500}
     hasMasterSpinner
   >
-    <h2>Carousel (With Master Loading Spinner)</h2>
+    <h2> Example Poems </h2>
     <p>
-      This spinner will go away after all the images have loaded. You might want
-      to use Chrome dev tools to throttle the network connection so you can see
-      the spinner.
+      These are example poems with their original versions on top and
+      translations at the bottom. Translations will be added once the font for
+      the language is created along with its romanization. Yes the carousel is
+      just for show atm. Eventually each of these languages will have
+      translations into my conlang and vice versa.
     </p>
     <MySlider>
       <MySlide index={0}>
+        <h2> Shakespeare Sonnet 1</h2>
         {values.shakespeare.map((str, key) => (
           <p key={key}>{str}</p>
         ))}
       </MySlide>
-      <MySlide index={1}>
-        {values.shakespeare.map((str, key) => (
+      <ArabicSlide index={1}>
+        <h2> Al Khansaa (idk the arabic name) </h2>
+        {values.alKhansaa.map((str, key) => (
           <p key={key}>{str}</p>
         ))}
-      </MySlide>
+      </ArabicSlide>
     </MySlider>
     <ButtonFirst>First</ButtonFirst>
     <ButtonBack>Back</ButtonBack>
