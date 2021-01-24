@@ -11,7 +11,10 @@ import {
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
-import {TemporaryConlangPagePoemCarouselValues as values} from '../values';
+import {
+  TemporaryConlangPagePoemCarouselValues as values,
+  printValues,
+} from '../values';
 
 const MySlider = styled(Slider, {
   maxWidth: '1200px',
@@ -27,6 +30,8 @@ const MySlide = styled(Slide, {
 });
 
 const ArabicSlide = withStyle(MySlide, {
+  direction: 'rtl',
+  fontFamily: 'Linotype',
   textAlign: 'right',
 });
 
@@ -43,26 +48,18 @@ const ConlangPagePoemCarousel = () => (
     naturalSlideHeight={500}
     hasMasterSpinner
   >
-    <h2> Example Poems </h2>
     <p>
-      These are example poems with their original versions on top and
-      translations at the bottom. Translations will be added once the font for
-      the language is created along with its romanization. Yes the carousel is
-      just for show atm. Eventually each of these languages will have
-      translations into my conlang and vice versa.
+      These are example poems that will be removed later on. Eventually these
+      will be replaced with demos of poems in my conlang.
     </p>
     <MySlider>
       <MySlide index={0}>
-        <h2> Shakespeare Sonnet 1</h2>
-        {values.shakespeare.map((str, key) => (
-          <p key={key}>{str}</p>
-        ))}
+        <h2> Example Shakespeare </h2>
+        {printValues(values.shakespeare)}
       </MySlide>
       <ArabicSlide index={1}>
-        <h2> Al Khansaa (idk the arabic name) </h2>
-        {values.alKhansaa.map((str, key) => (
-          <p key={key}>{str}</p>
-        ))}
+        <h2> Example al-Khansaa </h2>
+        {printValues(values.alKhansaa)}
       </ArabicSlide>
     </MySlider>
     <ButtonFirst>First</ButtonFirst>

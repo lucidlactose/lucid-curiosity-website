@@ -21,6 +21,11 @@ export const SomethingBlue = '#AFD7FF';
 export const BackgroundDarkWhite = '#EEE';
 
 /*
+    CURRENT FONTS SAMPLED AND USED
+    Arabic: Tahoma,Iranian Sans,Noto Sans Arabic,DejaVu Sans, sans-serif, Lateef, Greta, Droid Arabic Naskh
+    English: HelveticaNeue-Light, Arial
+
+
     COMPONENT IMPORT ORDER
     - React dependencies
     - Fusion dependencies
@@ -48,6 +53,7 @@ export const BackgroundDarkWhite = '#EEE';
         backgroundColor
         background
         color
+        direction
         fontSize
         fontFamily
         display

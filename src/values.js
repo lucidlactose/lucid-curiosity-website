@@ -1,5 +1,19 @@
 // @flow
 // Temporary values so I don't have to make an API call yet
+import React from 'react';
+
+type DataType = {
+  string: string[],
+};
+interface TempValues {
+  data: DataType[];
+}
+
+// TODO the return type makes a few flow errors so it's 'any' atm
+// this should be React.component or something but it hasn't worked yet
+export const printValues = (values: string[]): any =>
+  values.map<any>((str: string, key: any) => <p key={key}>{str}</p>);
+
 export const TemporaryHomePageValues = {
   TitleText: 'Welcommen',
   BoxText: [
@@ -55,7 +69,7 @@ export const TemporaryConlangPagePoemCarouselValues = {
   // credit to this is http://www.reflectionsonlandusetranslationsmorebycew.com/ENGLISH_LANG_POETRY/TRANSLATIONS/InniyAriqtubyalKhansaa.html
   // I can't read arabic yet so I don't even know the title in English
   alKhansaa: [
-    'ٳني أرقت فبت ٱلليل ساهرة ',
+    'ٳني أرقت فبت ٱلليل ساهرة* ',
     'كآنمآ كحلت عيني بعار',
     '',
     'أرعى آلنجوم و لم كلفت رعيتها',
