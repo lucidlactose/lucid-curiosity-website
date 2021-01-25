@@ -1,15 +1,23 @@
 // @flow
 // Temporary values so I don't have to make an API call yet
+import React from 'react';
+
+// TODO the return type makes a few flow errors so it's 'any' atm
+// this should be React.component or something but it hasn't worked yet
+export const printValues = (values: string[]): any =>
+  values.map<any>((str: string, key: any) => <p key={key}>{str}</p>);
+
 export const TemporaryHomePageValues = {
   TitleText: 'Welcommen',
   BoxText: [
     {
       text: 'Upload',
-      link: './upload',
+      link: 'upload',
     },
-    {text: 'Something else'},
-    {text: 'Something else'},
-    {text: 'Something else'},
+    {
+      text: 'Conlang',
+      link: 'conlang',
+    },
   ],
 };
 
@@ -30,5 +38,55 @@ export const TemporaryFooterValues = {
   ],
   RightBox: [
     'I guess this should look alright maybe? idk how long horizontally these should be',
+  ],
+};
+
+export const TemporaryConlangPagePoemCarouselValues = {
+  shakespeare: [
+    'From fairest creatures we desire increase,',
+    'That thereby beauty’s rose might never die,',
+    'But as the riper should by time decrease,',
+    'His tender heir mught bear his memeory:',
+    'But thou, contracted to thine own bright eyes,',
+    'Feed’st thy light’st flame with self-substantial fuel,',
+    'Making a famine where abundance lies,',
+    'Thyself thy foe, to thy sweet self too cruel.',
+    'Thou that art now the world’s fresh ornament',
+    'And only herald to the gaudy spring,',
+    'Within thine own bud buriest thy content',
+    'And, tender churl, makest waste in niggarding.',
+    'Pity the world, or else this glutton be,',
+    'To eat the world’s due, by the grave and thee.',
+  ],
+
+  // credit to this is http://www.reflectionsonlandusetranslationsmorebycew.com/ENGLISH_LANG_POETRY/TRANSLATIONS/InniyAriqtubyalKhansaa.html
+  // I can't read arabic yet so I don't even know the title in English
+  alKhansaa: [
+    'ٳني أرقت فبت ٱلليل ساهرة* ',
+    'كآنمآ كحلت عيني بعار',
+    '',
+    'أرعى آلنجوم و لم كلفت رعيتها',
+    'و تاره ٲتغشى فضل آطمار',
+    '  ',
+    'و قد سمعت و لم أبجح به خبرا',
+    'محدثا جاء ينمى رجع آخبار',
+    '',
+    'يقول صخر مقيم ثم في جدث',
+    'لدى آلضريح صريع بين آحجار',
+    '',
+    'فاذهب فلا يبعدنك آلله من رجل',
+    'ترك ضيم و طلاب باوتار',
+    '',
+    'قد كنت تحمل قلبا غير مهتضم',
+    'مركبا في نصاب غير خوار',
+    '',
+    'مثل آلسنان تضىء الليل صورته',
+    'مرّ ألمريرة حر و إبن احرار',
+    '',
+    'فسوف آبكيك ما ناحت مطوقه',
+    'و ما أضاءت نجوم آلليل للساري',
+    '',
+    'و لن أصالح قوما كنت حرهم',
+    'حتى تعود بياضا جؤنة آلقار  ',
   ],
 };
