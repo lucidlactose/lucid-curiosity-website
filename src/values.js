@@ -2,13 +2,6 @@
 // Temporary values so I don't have to make an API call yet
 import React from 'react';
 
-type DataType = {
-  string: string[],
-};
-interface TempValues {
-  data: DataType[];
-}
-
 // TODO the return type makes a few flow errors so it's 'any' atm
 // this should be React.component or something but it hasn't worked yet
 export const printValues = (values: string[]): any =>

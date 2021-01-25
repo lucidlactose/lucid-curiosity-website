@@ -5,7 +5,7 @@ import ConlangPagePoemCarousel from './conlang-page-poem-carousel';
 
 const Wrapper = styled('div', {
   margin: '0 auto',
-  padding: '32px 0',
+  padding: '32px',
 });
 
 const TitleWrapper = styled('h1', {
@@ -15,14 +15,13 @@ const TitleWrapper = styled('h1', {
   margin: '0 auto',
 });
 
-const CarouselWrapper = styled('div', {
-  margin: '0 30px',
-});
-
 const StickyWrapper = styled('h2', {
   backgroundColor: 'white',
-  padding: '10px 10px 10px 30px',
-  position: 'sticky',
+  display: 'flex',
+  border: '1px solid black',
+  height: '30px',
+  padding: '10px 30px',
+  // position: 'sticky',
   top: '50px',
   zIndex: '999',
 });
@@ -31,7 +30,10 @@ const ConlangPage = () => (
   <Wrapper>
     <TitleWrapper>Welcome to my Conlang Documentation.</TitleWrapper>
     <StickyWrapper> Alphabet </StickyWrapper>
-    <p> Yes I'm copying wikipedia formatting for some of this stuff </p>
+    <p>
+      Yes I&aposm copying wikipedia formatting for some of this stuff. (This is
+      temp)
+    </p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu
       consequat quam. Nulla euismod sagittis nulla, ac volutpat ligula. Nullam
@@ -72,9 +74,7 @@ const ConlangPage = () => (
       enim ullamcorper rutrum vitae eget neque.
     </p>
     <StickyWrapper> Example Poems </StickyWrapper>
-    <CarouselWrapper>
-      <ConlangPagePoemCarousel />
-    </CarouselWrapper>
+    <ConlangPagePoemCarousel />
   </Wrapper>
 );
 
