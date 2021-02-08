@@ -3,9 +3,15 @@ import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
 import ConlangPagePoemCarousel from './conlang-page-poem-carousel';
 
+// this src might work but I need to install xcode updates
 const Wrapper = styled('div', {
   margin: '0 auto',
   padding: '32px',
+  fontFamily: {
+    src: 'url("/assets/fonts/mabopefu_1_11.otf") format(otf)',
+    // fontWeight: 'normal',
+    // fontStyle: 'normal'
+  }
 });
 
 const TitleWrapper = styled('h1', {
