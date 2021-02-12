@@ -40,6 +40,7 @@ const InsideBox = styled('div', {
   margin: '64px auto',
 });
 
+
 const UploadPageDropzone = () => {
   const [files, setFiles] = useState([]);
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone({
@@ -55,6 +56,13 @@ const UploadPageDropzone = () => {
       );
     },
   });
+  // here is a temp function I plan to move out
+  const toKB = (file_size: number) => {
+    if (file_size > 1000000) {
+      return (file_size/ 1000000).toFixed(2) + " MB"
+    }
+    return (file_size/ 1000).toFixed(2) + " KB";
+  };
 
   useEffect(
     () => () => {
@@ -76,7 +84,7 @@ const UploadPageDropzone = () => {
           <ul>
             {acceptedFiles.map(file => (
               <li key={file.path}>
-                {file.path} : files {file.size} bytes
+                {file.path} : files {toKB(file.size)}
                 <UploadPageImgThumbnail {...file} />
               </li>
             ))}
