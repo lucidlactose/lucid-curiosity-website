@@ -18,6 +18,10 @@ export const TemporaryHomePageValues = {
       text: 'Conlang',
       link: 'conlang',
     },
+    {
+      text: 'A mess',
+      link: 'messy',
+    },
   ],
 };
 
