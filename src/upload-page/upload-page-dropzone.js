@@ -4,7 +4,8 @@ import {styled} from 'fusion-plugin-styletron-react';
 import {useDropzone} from 'react-dropzone';
 import {BackgroundGrey, SomethingBlue} from '../styles';
 import {TemporaryUploadPageValues as values} from '../values';
-import UploadPageImgThumbnail from './upload-page-img-thumbnail';
+import UploadPageDropzoneImgThumbnail from './upload-page-dropzone-img-thumbnail';
+import UploadPageDropzoneImgMetaData from './upload-page-dropzone-img-metadata';
 
 const LeftHandWrapper = styled('div', {
   backgroundColor: 'black',
@@ -40,7 +41,6 @@ const InsideBox = styled('div', {
   margin: '64px auto',
 });
 
-
 const UploadPageDropzone = () => {
   const [files, setFiles] = useState([]);
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone({
@@ -56,13 +56,6 @@ const UploadPageDropzone = () => {
       );
     },
   });
-  // here is a temp function I plan to move out
-  const toKB = (file_size: number) => {
-    if (file_size > 1000000) {
-      return (file_size/ 1000000).toFixed(2) + " MB"
-    }
-    return (file_size/ 1000).toFixed(2) + " KB";
-  };
 
   useEffect(
     () => () => {
@@ -84,8 +77,8 @@ const UploadPageDropzone = () => {
           <ul>
             {acceptedFiles.map(file => (
               <li key={file.path}>
-                {file.path} : files {toKB(file.size)}
-                <UploadPageImgThumbnail {...file} />
+                <UploadPageDropzoneImgMetaData file={file} />
+                <UploadPageDropzoneImgThumbnail {...file} />
               </li>
             ))}
           </ul>

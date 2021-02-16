@@ -30,7 +30,7 @@ const UploadPage = () => (
     <Center>
       <Parent>
         <h2> {values.TitleText} </h2>
-        <Text> {values.TemporaryText} </Text>
+        <Text> {values.DiffText} </Text>
       </Parent>
     </Center>
   </FullHeightDiv>
