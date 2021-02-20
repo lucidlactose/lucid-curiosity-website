@@ -1,8 +1,7 @@
 // @flow
-import React from 'react';
+import React, {useState} from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
 import {TemporaryUploadPageValues as values} from '../values';
-import UploadPageDropzone from './upload-page-dropzone';
 
 const Center = styled('div', {
   justifyContent: 'center',
@@ -18,7 +17,7 @@ const Parent = styled('div', {
   marginRight: '16px',
 });
 
-const Text = styled('button', props => ({
+const Text = styled('button', {
   backgroundColor: '#777',
   color: 'white',
   cursor: 'pointer',
@@ -27,46 +26,28 @@ const Text = styled('button', props => ({
   textAlign: 'left',
   outline: 'none',
   fontSize: '15px',
-// :after {
-//   content: '\002B';
-//   color: white;
-//   font-weight: bold;
-//   float: right;
-//   margin-left: 5px;
-// }
-  ":hover": {
+  ':hover': {
     backgroundColor: '#555',
-  }
-}));
-
-const Content = styled('div', {
-
+  },
 });
 
-const UploadPageFileSim = () => {
-    const collapse = () => {
-        // const coll = ; // gets all under a certain class...
-        // for (i = 0; i < coll.length; i++) {
-        //     coll[i].addEventListener("click", function() {
-        //         this.classList.toggle("active");
-                
-        //         var content = this.nextElementSibling;
-        //         if (content.style.maxHeight){
-        //             content.style.maxHeight = null;
-        //         } else {
-        //             content.style.maxHeight = content.scrollHeight + "px";
-        //         } 
-        //     });
-        // }
-    };
+const Content = styled('div', props => ({
+  display: props.$isactive ? 'block' : 'none',
+}));
 
-    return (
-        <Center>
-            <Parent>
-            <Text> asoudhasodjsaojdsioa </Text>
-            </Parent>
-        </Center>
-    );
+const UploadPageFileSim = () => {
+  const [isHidden, setIsHidden] = useState(false);
+  const collapse = () => {
+    setIsHidden(!isHidden);
+  };
+  return (
+    <Center>
+      <Parent>
+        <Text onClick={collapse}> asoudhasodjsaojdsioa </Text>
+        <Content $isactive={isHidden}> Something else </Content>
+      </Parent>
+    </Center>
+  );
 };
 
 export default UploadPageFileSim;
