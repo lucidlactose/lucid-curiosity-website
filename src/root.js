@@ -35,6 +35,7 @@ const root = (
         <Route exact path="/" component={HomePage} />
         <Route exact name="upload" path="/upload" component={UploadPage} />
         <Route exact name="conlang" path="/conlang" component={ConlangPage} />
+        <Route exact name="messy" path="/messy" component={null} />        
         <Route exact path="/list" component={ItemListPage} />
         <Route component={PageNotFound} />
       </Switch>
