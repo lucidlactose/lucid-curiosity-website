@@ -24,7 +24,7 @@ const PageContainer = styled('div', {
   fontFamily: 'HelveticaNeue-Light, Arial',
   minHeight: 'calc(100vh - 50px - 260px)',
   maxWidth: '1420px',
-  margin: '64px auto 14px',
+  margin: '50px auto 14px',
 });
 
 const root = (
