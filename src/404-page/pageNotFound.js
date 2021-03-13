@@ -4,7 +4,7 @@ import {NotFound} from 'fusion-plugin-react-router';
 
 const PageNotFound = () => (
   <NotFound>
-    <div>404</div>
+    <div>404 Something something </div>
   </NotFound>
 );
 

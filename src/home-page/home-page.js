@@ -29,7 +29,7 @@ const Wrapper = styled('div', {
   padding: '32px 0',
 });
 
-const TitleWrapper = styled('th', {
+const TitleWrapper = styled('div', {
   fontSize: '32px',
   display: 'flex',
   justifyContent: 'center',
@@ -48,7 +48,7 @@ const FlexWrapper = styled('div', {
 // 16 font size
 // (150 -16)/2 = 67px
 // when I was testing making the box round, I started thinking, "what if all these options were floating planets/ bouncing balls on a web page"
-const BoxWrapper = styled('td', {
+const BoxWrapper = styled('div', {
   fontSize: '16px',
   display: 'flex',
   justifyContent: 'center',
