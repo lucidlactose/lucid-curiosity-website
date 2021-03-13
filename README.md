@@ -4,7 +4,7 @@
 
 This project focuses doesn't really focus on anything. It's a (hopefully) organized website full of React and CSS experiments.
 
-The original goal was to make some sort of photo organizer. This was inspired by the nightmare that is Google Photos and especially Apple Photos. Personally I like using both albums and tags to find photos and most alternatives are just as horrid. I personally use DigiKam, and inspired by recreating a spirtual successor on a browser. Don't view this as a subsitute or alternative... yet.
+The original goal was to make some sort of photo organizer. This was inspired by the nightmare that is Google Photos and especially Apple Photos. I use inspired looslely, because nothing of that original project currently exists. Now there are some remnants of it left, but the original uploader and organization has been repurposed for wacky ideas.
 
 Now there's a few more goals. Check branches for incomplete work/ spilt can's of gobbledygook and whachamacallits.
 <hr>
