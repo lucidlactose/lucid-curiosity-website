@@ -4,7 +4,8 @@ import {styled} from 'fusion-plugin-styletron-react';
 import {useDropzone} from 'react-dropzone';
 import {BackgroundGrey, SomethingBlue} from '../styles';
 import {TemporaryUploadPageValues as values} from '../values';
-import UploadPageImgThumbnail from './upload-page-img-thumbnail';
+import UploadPageDropzoneImgThumbnail from './upload-page-dropzone-img-thumbnail';
+import UploadPageDropzoneImgMetaData from './upload-page-dropzone-img-metadata';
 
 const LeftHandWrapper = styled('div', {
   backgroundColor: 'black',
@@ -21,7 +22,8 @@ const DropzoneContainer = styled('section', {
   height: 'calc(100vh - 114px)',
   minWidth: '512px',
   maxWidth: '1024px',
-  padding: '82px 32px 32px',
+  padding: '82px 32px 32px 578px',
+  marginLeft: '-512px',
   position: 'fixed',
   top: '0',
   zIndex: '10',
@@ -75,8 +77,8 @@ const UploadPageDropzone = () => {
           <ul>
             {acceptedFiles.map(file => (
               <li key={file.path}>
-                {file.path} : files {file.size} bytes
-                <UploadPageImgThumbnail {...file} />
+                <UploadPageDropzoneImgMetaData file={file} />
+                <UploadPageDropzoneImgThumbnail {...file} />
               </li>
             ))}
           </ul>
