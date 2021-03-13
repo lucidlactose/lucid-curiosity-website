@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
+import {assetUrl} from 'fusion-core';
 import {Route, Switch} from 'fusion-plugin-react-router';
-
 import {styled} from 'fusion-plugin-styletron-react';
+
 import {BackgroundDarkWhite} from './styles';
 import HomePage from './home-page/home-page.js';
 import UploadPage from './upload-page/upload-page.js';
@@ -11,6 +12,10 @@ import PageNotFound from './404-page/pageNotFound.js';
 import SharedHeaderThing from './shared-header/shared-header-thing';
 import SharedFooterThing from './shared-footer/shared-footer-thing';
 import ConlangPage from './conlang-page/conlang-page';
+
+const Wrapper = styled('div', {
+  backgroundImage: `url(${assetUrl('./assets/something.png')})`,
+})
 
 // Header height: 50px
 // Footer height: 260px
@@ -23,7 +28,7 @@ const PageContainer = styled('div', {
 });
 
 const root = (
-  <>
+  <Wrapper>
     <SharedHeaderThing />
     <PageContainer>
       <Switch>
@@ -35,7 +40,7 @@ const root = (
       </Switch>
     </PageContainer>
     <SharedFooterThing />
-  </>
+  </Wrapper>
 );
 
 export default root;
